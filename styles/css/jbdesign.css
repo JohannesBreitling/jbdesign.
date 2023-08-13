@@ -1,0 +1,85 @@
+/* DEFAULT VARIABLES */
+:root {
+  /* COLORS START */
+  --default-color: #101a1f;
+  --font-color-1: var(--default-color);
+  --background-color-1: #fdfdfd;
+  /* COLORS END */
+  /* SPACING START*/
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  /* SPACING END*/
+  --default-font-family: sans-serif;
+  --headline-font-family: sans-serif;
+  --default-letter-spacing: 0.1px;
+  --headline-letter-spacing: -0.3px;
+  --default-font-size: 16px;
+  --default-font-weight: 400;
+  --bold-font-weight: 600;
+  /* BORDERS START */
+  --default-border: 1px solid var(--default-color);
+  --default-border-radius: 0px;
+  /*BORDERS END  */
+}
+
+/* NORMALIZE START */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.jbdesign {
+  background-color: var(--background-color-1);
+  color: var(--font-color-1);
+}
+.jbdesign span, .jbdesign p, .jbdesign a {
+  font-family: var(--default-font-family);
+  letter-spacing: var(--default-letter-spacing);
+  font-size: var(--default-font-size);
+  font-weight: var(--default-font-weight);
+  text-decoration: none;
+  color: var(--font-color-1);
+}
+.jbdesign h1, .jbdesign h2, .jbdesign h3, .jbdesign h4, .jbdesign h5, .jbdesign h5, .jbdesign h6 {
+  display: inline;
+  font-family: var(--headline-font-family);
+  letter-spacing: var(--headline-letter-spacing);
+  color: var(--font-color-1);
+}
+.jbdesign h1 {
+  font-size: 80px;
+}
+.jbdesign h2 {
+  font-size: 64px;
+}
+.jbdesign h3 {
+  font-size: 48px;
+}
+.jbdesign h4 {
+  font-size: 40px;
+}
+.jbdesign h5 {
+  font-size: 32px;
+}
+.jbdesign h6 {
+  font-size: 24px;
+}
+.jbdesign .bold {
+  font-weight: var(--bold-font-weight);
+}
+
+.jbdesign .button-container {
+  padding: var(--s-3) var(--s-4);
+  border: var(--default-border);
+  border-radius: var(--default-border-radius);
+}
+
+/* NORMALIZE END *//*# sourceMappingURL=jbdesign.css.map */
