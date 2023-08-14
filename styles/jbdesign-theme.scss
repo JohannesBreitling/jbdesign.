@@ -5,6 +5,10 @@
     --default-font-family: 'Inter', sans-serif;
     --headline-font-family: 'Outfit', sans-serif;
 
-    --default-border: red 1px solid;
-    --default-border-radius: 4px;
+    //--default-border: var(--default-color) 1.5px solid;
+    --default-border: none;
+    --default-border-radius: 0px;
+
+    --accent-color: #26c57a;
+    --accent-color-2: rgb(67, 184, 102);
 }

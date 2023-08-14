@@ -6,13 +6,16 @@
     --default-color: #101a1f;
     --font-color-1: var(--default-color);
     //--font-color-2: ;
-    //--font-color-light-1: ;
+    --font-color-light-1: #fdfdfd;
     //--font-color-light-2: ;
 
     --background-color-1: #fdfdfd;
     //--background-color-2: ;
     //--background-color-light-1: ;
     //--background-color-light-2: ;
+
+    --accent-color: #4ff9ff;
+    --accent-color-2: #56dade;
 
     /* COLORS END */
 
@@ -27,6 +30,9 @@
 
     /* SPACING END*/
 
+    --navbar-height: 8vh;
+
+    --default-transition: all 0.3s ease;
 
 
     --default-font-family: sans-serif;
@@ -35,7 +41,7 @@
     --default-letter-spacing: 0.1px;
     --headline-letter-spacing: -0.3px;
 
-    --default-font-size: 16px;
+    --default-font-size: 20px;
     --default-font-weight: 400;
     --bold-font-weight: 600;
 
@@ -58,14 +64,22 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
+html {
     height: 100vh;
 }
+
+body {
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+}
+
+/* NORMALIZE END */
 
 .jbdesign {
     background-color: var(--background-color-1);
     color: var(--font-color-1);
+    height: 100%;
 
     span, p, a {
         font-family: var(--default-font-family);
@@ -114,20 +128,109 @@ body {
 
 }
 
+/* NAVBAR START */
+
 .jbdesign {
+    
+    .navbar {
+        height: var(--navbar-height);
+        width: 100%;
+        
+        
+        &.sticky {
+            position: fixed;
+        }
 
-    .button-container {
-        padding: var(--s-3) var(--s-4);
-        border: var(--default-border);
-        border-radius: var(--default-border-radius);
+        .desktop {
+            height: var(--navbar-height);
+            width: 100%;
+
+            background-color: red;
+        }
     }
-
-
-
 
 }
 
 
 
 
-/* NORMALIZE END */
+
+/* NAVBAR END */
+
+/* INPUTS START */
+
+.jbdesign {
+
+    .button-container {
+        position: relative;
+        display: inline-flex;
+        min-width: 128px;
+        transition: var(--default-transition);
+        border: var(--default-border);
+        border-radius: var(--default-border-radius);
+        background-color: var(--accent-color);
+        
+        a {
+            display: inline-flex;
+            justify-content: center;
+            width: 100%;
+            z-index: 1;
+
+            .inner {
+                z-index: 1;
+                padding: var(--s-3) var(--s-4);
+                
+                .text {
+                    color: var(--font-color-light-1);
+                }
+
+                .prepend {
+                    color: var(--font-color-light-1);
+                    margin-right: var(--s-2);
+                }
+
+                .append {
+                    color: var(--font-color-light-1);
+                    margin-left: var(--s-2);
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            width: 0%;
+            height: 100%;
+            border-radius: var(--default-border-radius);
+            position: absolute;
+            background-color: var(--accent-color-2);
+            transition: var(--default-transition);
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }    
+
+}
+
+/* INPUTS END */
+
+
+.jb-design {
+
+    &.slide-left {
+        .button-container::before {
+            left: 0;
+        }
+    }
+
+    &.slide-right {
+        .button-container::before {
+            right: 0;
+        }
+    }
+}
+
+
+
+
