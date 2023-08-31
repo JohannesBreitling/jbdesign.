@@ -1,0 +1,13 @@
+/* NAVBAR START */
+:root {
+  --height-navbar-desktop: 499px;
+}
+
+.jbdesign .navbar {
+  padding-left: var(--padding-x-default);
+  padding-right: var(--padding-x-default);
+  width: 100%;
+  height: 100px;
+}
+
+/* NAVBAR END *//*# sourceMappingURL=jbdesign-components.css.map */

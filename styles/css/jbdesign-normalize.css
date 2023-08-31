@@ -1,0 +1,24 @@
+/*
+-------------------------
+File for the basic normalization of the page
+-------------------------
+*/
+/* NORMAILZE START */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, .jbdesign {
+  width: 100%;
+  height: 100%;
+}
+
+.jbdesign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NORMALIZE END *//*# sourceMappingURL=jbdesign-normalize.css.map */

@@ -1,0 +1,82 @@
+/*
+-------------------------
+File for the typographie used in all of jbdesign
+
+TYPEFACES:
+jbdesign supports two fonts by default: One for normal text and one for more important / bold usecases, e. g. headlines, primary buttons, etc.
+
+-------------------------
+*/
+/* TYPOGRAPHIE START */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --font-size-h1: 107px;
+  --font-size-h2: 67px;
+  --font-size-h3: 54px;
+  --font-size-h4: 38px;
+  --font-size-h5: 27px;
+  --font-size-h6: 22px;
+  --font-size-body1: 20px;
+  --font-size-body2: 18px;
+  --letter-spacing-h1: -1.5px;
+  --letter-spacing-h2: -0.5px;
+  --letter-spacing-h3: 0px;
+  --letter-spacing-h4: 0.25px;
+  --letter-spacing-h5: 0px;
+  --letter-spacing-h6: 0.15px;
+  --letter-spacing-body1: 0.5px;
+  --letter-spacing-body2: 0.25px;
+  --font-family-headline: "Outfit", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+}
+
+.jbdesign h1, .jbdesign h2, .jbdesign h3, .jbdesign h4, .jbdesign h5, .jbdesign h6, .jbdesign .h1, .jbdesign .h2, .jbdesign .h3, .jbdesign .h4, .jbdesign .h5, .jbdesign .h6 {
+  font-family: var(--font-family-headline);
+}
+.jbdesign h1, .jbdesign .h1 {
+  font-weight: 300;
+}
+.jbdesign h2, .jbdesign .h2, .jbdesign h3, .jbdesign .h3, .jbdesign h4, .jbdesign .h4, .jbdesign h5, .jbdesign .h5 {
+  font-weight: 400;
+}
+.jbdesign h6, .jbdesign .h6 {
+  font-weight: 500;
+}
+.jbdesign h1, .jbdesign .h1 {
+  font-size: var(--font-size-h1);
+  letter-spacing: var(--letter-spacing-h1);
+}
+.jbdesign h2, .jbdesign .h2 {
+  font-size: var(--font-size-h2);
+  letter-spacing: var(--letter-spacing-h2);
+}
+.jbdesign h3, .jbdesign .h3 {
+  font-size: var(--font-size-h3);
+  letter-spacing: var(--letter-spacing-h3);
+}
+.jbdesign h4, .jbdesign .h4 {
+  font-size: var(--font-size-h4);
+  letter-spacing: var(--letter-spacing-h4);
+}
+.jbdesign h5, .jbdesign .h5 {
+  font-size: var(--font-size-h5);
+  letter-spacing: var(--letter-spacing-h5);
+}
+.jbdesign h6, .jbdesign .h6 {
+  font-size: var(--font-size-h6);
+  letter-spacing: var(--letter-spacing-h6);
+}
+.jbdesign p, .jbdesign span, .jbdesign .font-body1, .jbdesign .font-body2, .jbdesign .font-button {
+  font-family: var(--font-family-body);
+}
+.jbdesign p, .jbdesign span, .jbdesign .font-body1 {
+  font-size: var(--font-size-body1);
+  letter-spacing: var(--letter-spacing-body1);
+}
+.jbdesign .font-body2 {
+  font-size: var(--font-size-body2);
+  letter-spacing: var(--letter-spacing-body2);
+}
+
+/* TYPOGRAPHIE END *//*# sourceMappingURL=jbdesign-typo.css.map */

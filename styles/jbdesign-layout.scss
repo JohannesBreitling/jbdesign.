@@ -1,0 +1,34 @@
+:root {
+
+    --width-container: 70%;
+
+
+
+
+    --breakpoint-lg: 1200px;
+    --breakpoint-md: 992px;
+    --breakpoint-sm: 576px;
+
+    --padding-x-default: 180px;
+
+}
+
+
+.jbdesign {
+
+    .container {
+        width: var(--width-container);
+    }
+
+
+
+}
+
+@media screen and (max-width: 991px) {
+        
+    .jbdesign {
+        .container {
+            width: 100%;
+        }
+    }
+}
