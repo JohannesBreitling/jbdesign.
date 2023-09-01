@@ -1,13 +1,31 @@
 /* NAVBAR START */
 :root {
-  --height-navbar-desktop: 499px;
+  --height-navbar-desktop: 85px;
 }
 
+.jbdesign .navbar-placeholder {
+  width: 100%;
+  height: 0;
+}
 .jbdesign .navbar {
   padding-left: var(--padding-x-default);
   padding-right: var(--padding-x-default);
   width: 100%;
-  height: 100px;
+  height: var(--height-navbar-desktop);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition-default);
+}
+.jbdesign .navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
+}
+.jbdesign .navbar.sticky ~ .navbar-placeholder {
+  height: var(--height-navbar-desktop);
 }
 
 /* NAVBAR END *//*# sourceMappingURL=jbdesign-components.css.map */
