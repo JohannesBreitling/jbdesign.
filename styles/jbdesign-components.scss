@@ -6,6 +6,9 @@
 
 :root {
     --height-navbar-desktop: 85px;
+
+    //--navbar-border: 
+    //--navbar-box-shadow: 
 }
 
 
@@ -17,6 +20,8 @@
     }
 
     .navbar {
+        z-index: 10;
+        background-color: var(--color-background1);
         padding-left: var(--padding-x-default);
         padding-right: var(--padding-x-default);
         width: 100%;
@@ -38,18 +43,59 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: red;
+            box-shadow: var(--box-shadow-default);
+            border-bottom: var(--border-default)
         }
 
         &.sticky ~ .navbar-placeholder {
             height: var(--height-navbar-desktop);
         }
+
+        .items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .item-container {
+                margin-left: var(--spacing-4);
+
+                .item {
+                    padding: var(--spacing-2) 0px;
+                    position: relative;
+                    color: var(--color-font);
+
+                    &::before {
+                        content: '';
+                        background-color: var(--color-accent1);
+                        height: 2px;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
         
     }
+
+    /* NAVBAR END */
+
+    /* CARD START */
+    
+    .card {
+        border: var(--border-default);
+        box-shadow: var(--box-shadow-default);
+        border-radius: var(--border-radius-default);
+        padding: var(--spacing-3);
+        background-color: var(--color-background2);
+    }
+    
+    /* CARD END */
     
 }
 
 
 
 
-/* NAVBAR END */

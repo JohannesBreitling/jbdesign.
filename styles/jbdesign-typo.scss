@@ -87,11 +87,11 @@ jbdesign supports two fonts by default: One for normal text and one for more imp
         letter-spacing: var(--letter-spacing-h6);
     }
 
-    p, span, .font-body1, .font-body2, .font-button {
+    a, p, span, .font-body1, .font-body2, .font-button {
         font-family: var(--font-family-body);
     }
 
-    p, span, .font-body1 {
+    a, p, span, .font-body1 {
         font-size: var(--font-size-body1);
         letter-spacing: var(--letter-spacing-body1);
     }
@@ -99,6 +99,26 @@ jbdesign supports two fonts by default: One for normal text and one for more imp
     .font-body2 {
         font-size: var(--font-size-body2);
         letter-spacing: var(--letter-spacing-body2);
+    }
+
+    .font-button {
+        font-size: 18px;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-accent1);
+        transition: var(--transition-default);
+
+        &:hover {
+            color: var(--color-accent2);
+        }
+    }
+
+    .bold {
+        font-weight: 600;
     }
 
 }

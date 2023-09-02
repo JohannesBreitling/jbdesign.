@@ -1,0 +1,43 @@
+
+/*
+-------------------------
+File for the colors in jbdesign
+jbdesign supports the following colors by default:
+  - color-text1: default text color
+  - color-text2t: lighter text color
+  - color-text-dark1: default text color on darker backgrounds
+  - color-text-dark2: lighter text color on darker backgrounds
+
+  - color-background1: default background color
+  - color-background2: darker background color
+  - color-background-dark1: default dark background color
+  - color-background-dark2: lighter dark background color
+
+  - color-accent1: accent color of jbdesign
+  - color-accent2: shade of accent color
+
+  - color-success: color of success
+  - color-error: color of error
+  - color-warning: color of warning
+
+-------------------------
+*/
+
+/* NORMAILZE START */
+
+:root {
+    --color-background1: #fefefe;
+    --color-background2: #f2f2f2;
+
+    --color-divider: #d3d3d3;
+    
+    --color-accent1: #48b3b3;
+    --color-accent2: #2c7d7d;
+}
+
+.jbdesign {
+    background-color: var(--color-background1);
+}
+
+
+/* NORMALIZE END */

@@ -1,3 +1,14 @@
+/*
+-------------------------
+File for the basic layout of the page
+
+
+Style guide for z-index:
+  - normal page-content: 0
+  - navbar: 10
+
+-------------------------
+*/
 :root {
   --width-container: 70%;
   --breakpoint-lg: 1200px;
