@@ -23,11 +23,17 @@ jbdesign supports the following colors by default:
 */
 /* NORMAILZE START */
 :root {
-  --color-background1: #fefefe;
+  --color-background1: #fdfdfd;
   --color-background2: #f2f2f2;
+  --color-text1: #0d1317;
+  --color-text1-shade: #b6b6b6;
+  --color-text2: #2b3c47;
+  --color-text2-shade: #3f6178;
   --color-divider: #d3d3d3;
-  --color-accent1: #48b3b3;
-  --color-accent2: #2c7d7d;
+  --color-accent1: #89d2dc;
+  --color-accent1-shade: #4d9099;
+  --color-accent2: #6564db;
+  --color-accent2-shade: #252475;
 }
 
 .jbdesign {

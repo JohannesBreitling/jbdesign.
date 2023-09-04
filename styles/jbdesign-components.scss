@@ -19,7 +19,82 @@
         height: 0;
     }
 
+    &.slide-left {
+        .navbar .items {
+            .item::before {
+                width: 0;
+                left: 0;
+            }
+
+            .item:hover::before {
+                width: 100%;
+            }
+
+            .item-container {
+                .submenu {
+                    transform: translate(-24px, 0px);
+
+                    .submenu-item-container::before {
+                        left: 0;
+                        width: 0%;
+                    }
+
+                    .submenu-item-container:hover::before {
+                        width: 100%;
+                    }
+
+                    .submenu-item-container:hover > .subsubmenu {
+                        transform: translate(0px, 0px);
+                    }
+
+                    .subsubmenu {
+                        transform: translate(-24px, 0);
+
+                        .subsubmenu-item-container::before {
+                            left: 0;
+                            width: 0%;
+                        }
+
+                        .subsubmenu-item-container:hover::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.slide-right {
+        .navbar .items {
+            .item::before {
+                width: 0;
+                right: 0;
+            }
+
+            .item:hover::before {
+                width: 100%;
+            }
+
+            .item-container {
+                .submenu {
+
+                    transform: translate(24px, 0px);
+
+                    .submenu-item-container::before {
+                        right: 0;
+                        width: 0%;
+                    }
+
+                    .submenu-item-container:hover::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
     .navbar {
+        position: relative;
         z-index: 10;
         background-color: var(--color-background1);
         padding-left: var(--padding-x-default);
@@ -50,29 +125,143 @@
         &.sticky ~ .navbar-placeholder {
             height: var(--height-navbar-desktop);
         }
+        
+        .logo {
+            a {
+                color: var(--color-text2);
+            }
+
+            a:hover {
+                color: var(--color-text2-shade);
+            }
+        }
 
         .items {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            height: 100%;
+
+            .submenu {
+                position: absolute;
+                background-color: var(--color-background1);
+                z-index: 11;
+                top: 100%;
+                width: 200px;
+                border-radius: 0px 0px var(--border-radius-default) var(--border-radius-default);
+                box-shadow: var(--box-shadow-default);
+                
+                opacity: 0;
+                visibility: hidden;
+
+                transition: var(--transition-default);
+
+                &:hover {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+
+                .submenu-item-container {
+                    padding: var(--spacing-2) var(--spacing-3);
+                    width: 100%;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        top: 0;
+                        background-color: var(--color-accent2);
+                        transition: var(--transition-default);
+                    }
+
+                    &:hover > .subsubmenu {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    .submenu-item {
+                        color: var(--color-text2);
+                    }
+                    
+                    .submenu-item:hover {
+                        color: var(--color-text2-shade);
+                    }
+
+                    .subsubmenu {
+                        width: 200px;
+                        position: absolute;
+                        left: 200px;
+                        top: 0;
+                        background-color: var(--color-background1);
+                        z-index: 12;
+                        
+                        border-radius: 0px 0px var(--border-radius-default) var(--border-radius-default);
+                        box-shadow: var(--box-shadow-default);
+
+                        visibility: hidden;
+                        opacity: 0;
+
+                        transition: var(--transition-default);
+
+                        .subsubmenu-item-container {
+                            padding: var(--spacing-2) var(--spacing-3);
+                            width: 100%;
+                            position: relative;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                height: 2px;
+                                width: 100%;
+                                top: 0;
+                                background-color: var(--color-accent2);
+                                transition: var(--transition-default);
+                            }
+
+                            .subsubmenu-item {
+                                color: var(--color-text2);
+                            }
+
+                            .subsubmenu-item:hover {
+                                color: var(--color-text2-shade);
+                            }
+                        }
+                    }
+                }
+            }
 
             .item-container {
-                margin-left: var(--spacing-4);
+                margin-left: var(--spacing-5);
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                &:hover > .submenu {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translate(0px, 0px);
+                }
 
                 .item {
                     padding: var(--spacing-2) 0px;
                     position: relative;
-                    color: var(--color-font);
+                    color: var(--color-text2);
+
+                    &:hover {
+                        color: var(--color-text2-shade);
+                    }
 
                     &::before {
                         content: '';
-                        background-color: var(--color-accent1);
+                        background-color: var(--color-accent2);
                         height: 2px;
-                        width: 100%;
                         position: absolute;
                         top: 0;
-                        left: 0;
+                        transition: var(--transition-default);
                     }
                 }
             }
@@ -80,7 +269,66 @@
         
     }
 
+    
+
+    &.slide-middle {
+        .navbar .items {
+            .item::before {
+                width: 0;
+                left: 50%;
+            }
+
+            .item:hover::before {
+                left: 0;
+                width: 100%;
+            }
+
+            .item-container {
+                .submenu .submenu-item-container::before {
+                    left: 50%;
+                    width: 0%;
+                }
+
+                .submenu .submenu-item-container:hover::before {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.simple-fade {
+        .navbar .items {
+            .item::before {
+                left: 0;
+                width: 100%;
+                opacity: 0;
+            }
+
+            .item:hover::before {
+                opacity: 1;
+            }
+
+            .item-container {
+                .submenu .submenu-item-container::before {
+                    left: 0;
+                    width: 100%;
+                    opacity: 0;
+                }
+
+                .submenu .submenu-item-container:hover::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     /* NAVBAR END */
+
+
+} 
+
+.jbdesign {
 
     /* CARD START */
     

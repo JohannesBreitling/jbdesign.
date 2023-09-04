@@ -102,9 +102,10 @@ jbdesign supports two fonts by default: One for normal text and one for more imp
     }
 
     .font-button {
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 0.25px;
         text-transform: uppercase;
+        font-weight: 600;
     }
 
     a {
@@ -113,7 +114,7 @@ jbdesign supports two fonts by default: One for normal text and one for more imp
         transition: var(--transition-default);
 
         &:hover {
-            color: var(--color-accent2);
+            color: var(--color-accent1-shade);
         }
     }
 
