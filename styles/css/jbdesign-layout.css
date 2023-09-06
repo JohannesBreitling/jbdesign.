@@ -15,6 +15,7 @@ Style guide for z-index:
   --breakpoint-md: 992px;
   --breakpoint-sm: 576px;
   --padding-x-default: 120px;
+  --padding-x-mobile: 80px;
 }
 
 .jbdesign .container {
